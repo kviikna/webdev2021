@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <link rel="icon" href="res/images/favicon.ico">
- <title>My Dashboard</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="res/css/style.css">
+	<title>Index page</title>
 </head>
 <body>
-	<header>
-		<strong>Welcome to your dashboard!</strong>
-	</header>
-<footer>
-	<ul>
-		<li>
-			<a href="https://ois2.ut.ee/">OIS</a>
-		</li>
-		<li>
-			<a href="https://courses.cs.ut.ee/">Courses</a>
-		</li>
-	</ul>
-</footer>
+<header>
+	<div class="topsearch">
+		<a class="active" href="./index.html">Home</a>
+		<a href='./login.html'>Login page</a>
+		<div class="search-container">
+			<input type="text" placeholder="Search" name="search">
+			<button type="submit">Submit</button>
+		</div>
+	</div>
+</header>
+<div class="flex-container">
+	<button id="commitButton" type="submit">New post</button>
+	<div>
+		Topmost entry
+	</div>
+	<div>
+		<img src="res/images/sample1.jpg" alt="Placeholder picture">
+		<p>Sample image title</p>
+	</div>
+	<div>
+		Sample text entry
+	</div>
+</div>
 </body>
 </html>

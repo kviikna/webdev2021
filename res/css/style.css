@@ -1,0 +1,124 @@
+html, body {
+	background-color: DodgerBlue;
+}
+
+.topsearch {
+	display: flex;
+	flex-direction: row;
+	background-color: #ffffff;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between
+}
+
+.topsearch a {
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	align-self: flex-start;
+}
+
+.topsearch a:hover {
+  background-color: LightGrey;
+}
+
+.topsearch .search-container {
+	margin-left: auto
+}
+
+.topsearch .search-container > input {
+	box-sizing: border-box;
+	height: 30px;
+	width: auto;
+	margin: 0;
+	padding: 5px;
+	border: 1px solid #e0e0e0;
+	align-self: center;
+}
+.topsearch .search-container > button {
+	box-sizing: border-box;
+	height: 30px;
+	width: 60px;
+	margin-right: 5px;
+	padding: 5px;
+	border: 1px solid #e0e0e0;
+	cursor: pointer;
+	background-color: #e0e0e0;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: White;
+	text-align: center;
+	min-width: 400px;
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-bottom: 300px;
+}
+
+#commitButton {
+	width: 75%;
+	max-width: 800px;
+	height: 30px;
+	align-self: center;
+	margin-top: 10px;
+}
+
+.flex-container div {
+	background-color: Crimson;
+	width: 80%;
+	margin: 10px;
+	padding: 5px;
+	max-width: 800px;
+	align-self: center;
+}
+
+.flex-container img {
+	max-width: 90%;
+}
+
+.flex-container img + p {
+	font-weight: bold;
+	text-align: left;
+	margin-left: 10%
+}
+
+.flex-container > div ~ div {
+	background-color: Coral;
+}
+
+.flex-login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.flex-login .wrapper {
+	background-color: White;
+	display: flex;
+	flex-direction:column;
+	width: 400px;
+	height: 300px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+.flex-login input[type=text], input[type=password] {
+	width: 60%;
+	align-self: center;
+	margin: 10px;
+}
+
+.wrapper > button {
+	width: 200px;
+	height: 30px;
+	align-self: center;
+	margin-top: 10px;
+}
+
