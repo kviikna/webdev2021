@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="res/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<title>Index page</title>
 </head>
 <body>
@@ -10,24 +11,88 @@
 	<div class="topsearch">
 		<a class="active" href="./index.html">Home</a>
 		<a href='./login.html'>Login page</a>
+		<div class="dropdown">
+			<button class="dropDownMenu" onclick="userInfoDropdown()">User
+			</button>
+			<div class="dropdown-content" id="activeUserInfo">
+				<p>User Name</p>
+				<p>user@email.com</p>
+			</div>
+		</div> 
 		<div class="search-container">
 			<input type="text" placeholder="Search" name="search">
 			<button type="submit">Submit</button>
 		</div>
 	</div>
 </header>
-<div class="flex-container">
+<div class="flex-container" id="postlist">
 	<button id="commitButton" type="submit">New post</button>
-	<div>
-		Topmost entry
-	</div>
-	<div>
-		<img src="res/images/sample1.jpg" alt="Placeholder picture">
-		<p>Sample image title</p>
-	</div>
-	<div>
-		Sample text entry
-	</div>
 </div>
+
+<script>
+/*
+	$(document).ready(function(){
+		$.get("http://myjson.dit.upm.es/api/bins/85zd", function(data) {
+			for(obj of data) {
+				let div = $('<div></div>')
+				if(obj.isImage) {
+					let imgpath = ""
+					if(!obj.imgPath) {
+						imgpath = '<img src="res/images/sample1.jpg" alt="Placeholder picture">';
+					} else {
+						imgpath = '<img src=' + obj.imgPath + 'alt=' + obj.title + '>';
+					}
+					let textEntry = '<p>' + obj.text + ' ~ ' + obj.author + '</p>';
+					div = $('<div>' + imgpath + textEntry + '</div>');
+				} else {
+					let textEntry = '<p>' + obj.text + ' ~ ' + obj.author + '</p>';
+					div = $('<div>' + textEntry + '</div>');
+				}
+				$("#postlist").append(div);
+			}
+		});
+	});
+*/
+	$(document).ready(function(){
+		// Requires running on local server, as modern security does not allow
+		// JSON loading from the machine directly to prevent malicious code execution.
+		// Can use eg 'python -m http.server' to create a local version.
+		// Then navigate to localhost:8000/path/to/index.html
+		$.getJSON("res/json/posts.json", function(data) {
+			for(obj of data) {
+				let div = $('<div></div>')
+				if(obj.isImage) {
+					let imgpath = ""
+					if(!obj.imgPath) {
+						imgpath = '<img src="res/images/sample1.jpg" alt="Placeholder picture">';
+					} else {
+						imgpath = '<img src=' + obj.imgPath + 'alt=' + obj.title + '>';
+					}
+					let textEntry = '<p>' + obj.text + ' ~ ' + obj.author + '</p>';
+					div = $('<div>' + imgpath + textEntry + '</div>');
+				} else {
+					let textEntry = '<p>' + obj.text + ' ~ ' + obj.author + '</p>';
+					div = $('<div>' + textEntry + '</div>');
+				}
+				$("#postlist").append(div);
+			}
+		});
+	});
+
+	//Open dropdown menu
+	function userInfoDropdown() {
+		document.getElementById("activeUserInfo").classList.toggle("show");
+	}
+	// Close dropdown on click outside
+	window.onclick = function(elem) {
+		if (!elem.target.matches('.dropDownMenu')) {
+			let activeUserInfo = document.getElementById("activeUserInfo");
+			if (activeUserInfo.classList.contains('show')) {
+				activeUserInfo.classList.remove('show');
+			}
+		}
+	}
+</script>
+
 </body>
 </html>

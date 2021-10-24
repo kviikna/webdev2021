@@ -20,7 +20,41 @@ html, body {
 }
 
 .topsearch a:hover {
-  background-color: LightGrey;
+	background-color: LightGrey;
+}
+
+.topsearch .dropdown {
+	float: left;
+	overflow: hidden;
+	text-align: center;
+	padding: 0px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	align-self: flex-start;
+}
+
+.topsearch dropdown:hover {
+	background-color: LightGrey;
+}
+
+.dropdown .dropDownMenu {
+	cursor: pointer;
+	font-size: 16px;  
+	border: none;
+	outline: none;
+	padding: 14px 16px;
+	margin: 0;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 160px;
+}
+
+.show {
+  display: block;
 }
 
 .topsearch .search-container {

@@ -1,0 +1,92 @@
+[
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": true,
+		"imgPath": null,
+		"text": "Sample text for entry 1",
+		"author": "user1",
+		"title": null,
+		"id": 1
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 2",
+		"author": "user1",
+		"title": null,
+		"id": 2
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 3",
+		"author": "user2",
+		"title": null,
+		"id": 3
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": true,
+		"imgPath": null,
+		"text": "Sample text for entry 4",
+		"author": "user5",
+		"title": null,
+		"id": 4
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 5",
+		"author": "user3",
+		"title": null,
+		"id": 5
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 6",
+		"author": "user2",
+		"title": null,
+		"id": 6
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": true,
+		"imgPath": null,
+		"text": "Sample text for entry 7",
+		"author": "user4",
+		"title": null,
+		"id": 7
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 8",
+		"author": "user4",
+		"title": null,
+		"id": 8
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": true,
+		"imgPath": null,
+		"text": "Sample text for entry 9",
+		"author": "user5",
+		"title": null,
+		"id": 9
+	},
+	{
+		"creationDate": "2021-10-10T13:37:42.123Z",
+		"isImage": false,
+		"imgPath": null,
+		"text": "Sample text for entry 10",
+		"author": "user2",
+		"title": null,
+		"id": 10
+	}
+]
